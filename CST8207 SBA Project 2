@@ -1,0 +1,11 @@
+#!/bin/bash
+
+read -p "Enter A Word: " word1
+read -p "Enter A 2nd Word: " word2
+
+if [ $word1 == $word2 ]; then
+	echo "These things match!"
+else
+	echo "These do not match!"
+
+fi
