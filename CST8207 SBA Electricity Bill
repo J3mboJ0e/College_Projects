@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "CST8207 SBA Electricity Bill"
+
+read -p "How many units would you like to purchase? " unit
+
+
+if [ $unit -le 50 ]; then
+	result=$(( 1 * $unit ));
+
+elif [ $unit -le 100 ]; then
+	result=$(( 2 * $unit - 50 )); 
+
+elif [ $unit -le 150 ]; then
+	result=$(( 3 * $unit - 150 ));
+
+elif [ $unit -gt 150 ]; then
+	result=$(( 4 * $unit - 300 ))
+
+fi
+
+echo "Your total today is $ $result CAD"
